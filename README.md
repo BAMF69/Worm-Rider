@@ -5,6 +5,7 @@
 ![Worm Rider: hooking and riding a sandworm](media/worm-rider.gif)
 
 ▶ [Watch the 12-second clip](media/worm-rider-demo.mp4)
+https://www.reddit.com/r/PassthroughMods/comments/1xkdsqg/comment/19rxu0x9b9281/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
 
 Taming works like ARK: Survival Ascended's Concavenator. Fire your Shigawire Claw at an approaching worm, get reeled onto its back, then survive the wild ride by matching the arrow prompts until the bond bar fills. Stall too long and Shai-Hulud throws you off. Once it's tamed, it's yours to steer.
 
