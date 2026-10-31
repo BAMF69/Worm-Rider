@@ -1,0 +1,97 @@
+{
+  "sheet": "stages",
+  "about": "The tame-and-ride state machine. One row = one stage.",
+  "columns": [
+    "id",
+    "summary",
+    "worm_ai",
+    "worm_dilation",
+    "rider_mounted",
+    "worm_driver",
+    "hud",
+    "next_ok",
+    "next_fail",
+    "timeout_cfg",
+    "on_timeout"
+  ],
+  "rows": [
+    {
+      "id": "idle",
+      "summary": "Looking for a worm. Plant a thumper to lure one.",
+      "worm_ai": "game",
+      "worm_dilation": 1.0,
+      "rider_mounted": false,
+      "worm_driver": "none",
+      "hud": "hud_idle",
+      "next_ok": "stunned",
+      "next_fail": "idle",
+      "timeout_cfg": "none",
+      "on_timeout": "ok"
+    },
+    {
+      "id": "stunned",
+      "summary": "You leapt on. The worm reels for a moment.",
+      "worm_ai": "released",
+      "worm_dilation": 0.05,
+      "rider_mounted": true,
+      "worm_driver": "hold",
+      "hud": "hud_stunned",
+      "next_ok": "wild_ride",
+      "next_fail": "thrown",
+      "timeout_cfg": "stun_seconds",
+      "on_timeout": "ok"
+    },
+    {
+      "id": "wild_ride",
+      "summary": "The worm surfs wild. Match the arrows to fill the bond bar.",
+      "worm_ai": "released",
+      "worm_dilation": 1.0,
+      "rider_mounted": true,
+      "worm_driver": "wild",
+      "hud": "hud_wild",
+      "next_ok": "tamed_ride",
+      "next_fail": "thrown",
+      "timeout_cfg": "sequence_seconds",
+      "on_timeout": "fail"
+    },
+    {
+      "id": "thrown",
+      "summary": "It shook you off. Lure it back with another thumper.",
+      "worm_ai": "game",
+      "worm_dilation": 1.0,
+      "rider_mounted": false,
+      "worm_driver": "none",
+      "hud": "hud_thrown",
+      "next_ok": "idle",
+      "next_fail": "idle",
+      "timeout_cfg": "thrown_cooldown",
+      "on_timeout": "ok"
+    },
+    {
+      "id": "tamed_ride",
+      "summary": "Your worm. Steer, dive, breach.",
+      "worm_ai": "released",
+      "worm_dilation": 1.0,
+      "rider_mounted": true,
+      "worm_driver": "rider",
+      "hud": "hud_ride",
+      "next_ok": "tamed_wait",
+      "next_fail": "idle",
+      "timeout_cfg": "none",
+      "on_timeout": "ok"
+    },
+    {
+      "id": "tamed_wait",
+      "summary": "Dismounted. Your worm waits; call it back.",
+      "worm_ai": "released",
+      "worm_dilation": 1.0,
+      "rider_mounted": false,
+      "worm_driver": "call",
+      "hud": "hud_wait",
+      "next_ok": "tamed_ride",
+      "next_fail": "idle",
+      "timeout_cfg": "none",
+      "on_timeout": "ok"
+    }
+  ]
+}

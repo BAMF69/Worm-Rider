@@ -1,0 +1,48 @@
+{
+  "sheet": "seat_bones",
+  "about": "Worm skeleton bones (from the in-game bone list, 31 bones: Root, Move, neck_01-05, head_01, mouth_*, tail_base, tail_01-10). role seat = where you sit (first one present wins), face = the bone you look toward.",
+  "columns": [
+    "id",
+    "bone",
+    "role",
+    "priority",
+    "why"
+  ],
+  "rows": [
+    {
+      "id": "s_neck3",
+      "bone": "neck_03",
+      "role": "seat",
+      "priority": 1,
+      "why": "behind the head, like Fremen riders"
+    },
+    {
+      "id": "s_neck2",
+      "bone": "neck_02",
+      "role": "seat",
+      "priority": 2,
+      "why": "fallback seat"
+    },
+    {
+      "id": "s_neck4",
+      "bone": "neck_04",
+      "role": "seat",
+      "priority": 3,
+      "why": "fallback seat"
+    },
+    {
+      "id": "f_head",
+      "bone": "head_01",
+      "role": "face",
+      "priority": 1,
+      "why": "look where the head goes"
+    },
+    {
+      "id": "f_neck5",
+      "bone": "neck_05",
+      "role": "face",
+      "priority": 2,
+      "why": "fallback look target"
+    }
+  ]
+}

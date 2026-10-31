@@ -1,0 +1,43 @@
+{
+  "name": "Worm Rider",
+  "version": "0.1.0",
+  "summary": "Hook, tame and ride the sandworms of Arrakis in Dune: Awakening (Solo).",
+  "license": "MIT",
+  "githubRepo": "BAMF69/Worm-Rider",
+  "games": [
+    {
+      "slug": "dune-awakening",
+      "role": "host",
+      "store": "steam",
+      "steamAppId": 1172710,
+      "minVersion": "1.5",
+      "mode": "solo"
+    }
+  ],
+  "multiplayer": false,
+  "components": [
+    {
+      "fileName": "WormRider-*.zip",
+      "source": "githubRelease",
+      "install": { "extractTo": "{game}" }
+    }
+  ],
+  "launch": {
+    "kind": "exe",
+    "path": "{game}/WormRider/Play Worm Rider.bat",
+    "notes": "Starts DuneSandbox-Win64-Shipping.exe with -nobattleye and the bundled UE4SS, then removes the loader when the game closes. Pick Solo on the main menu."
+  },
+  "uninstall": {
+    "run": "{game}/WormRider/Remove Loader.bat",
+    "thenDelete": "{game}/WormRider"
+  },
+  "media": {
+    "gif": "media/worm-rider.gif",
+    "video": "media/worm-rider-demo.mp4",
+    "image": "media/worm-rider-still.jpg"
+  },
+  "credits": [
+    { "name": "UE4SS", "author": "UE4SS contributors", "license": "MIT", "url": "https://github.com/UE4SS-RE/RE-UE4SS", "bundled": true },
+    { "name": "DST - Dune Server Tool", "author": "coastal-ms", "url": "https://github.com/coastal-ms/DST-DuneServerTool", "bundled": false, "note": "tested runtime and launch approach" }
+  ]
+}

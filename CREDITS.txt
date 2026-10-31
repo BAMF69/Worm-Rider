@@ -1,0 +1,20 @@
+Worm Rider includes:
+
+UE4SS (RE-UE4SS) 3.0.1-1164-g5e627997 - Unreal Engine scripting system
+  by the UE4SS contributors, MIT License (ue4ss/UE4SS-LICENSE.txt)
+  https://github.com/UE4SS-RE/RE-UE4SS
+  Files: dwmapi.dll, ue4ss/UE4SS.dll, ue4ss/UE4SS_SDK_Backends
+
+UE4SS Dune: Awakening game configuration (zCustomGameConfigs), MIT License
+  by the UE4SS contributors. Files: ue4ss/UE4SS-settings.ini,
+  ue4ss/MemberVariableLayout.ini, ue4ss/VTableLayout.ini
+
+The tested runtime and configuration archives are the ones bundled (unchanged)
+by DST - Dune Server Tool (coastal-ms/DST-DuneServerTool), whose Solo launch
+approach (-nobattleye, --ue4ss-path, restore-on-exit) this launcher follows.
+
+Taming design inspired by the Concavenator in ARK: Survival Ascended
+(Studio Wildcard). No ARK content is used.
+
+Dune: Awakening is (c) Funcom and its licensors. This is an unofficial, free,
+non-commercial fan mod. No game files are included.

@@ -1,0 +1,4 @@
+dist/
+__pycache__/
+*.pyc
+third_party/*.zip

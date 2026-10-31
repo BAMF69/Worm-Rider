@@ -1,0 +1,226 @@
+{
+  "sheet": "hud",
+  "about": "Every on-screen message. One row = one message. {tokens} are filled at runtime from the named fields.",
+  "columns": [
+    "id",
+    "text",
+    "color",
+    "fields"
+  ],
+  "rows": [
+    {
+      "id": "hud_idle",
+      "text": "",
+      "color": "sand",
+      "fields": []
+    },
+    {
+      "id": "hud_in_range",
+      "text": "SHAI-HULUD  {dist} m\nPress [{leap_key}] to leap on",
+      "color": "spice",
+      "fields": [
+        "dist",
+        "leap_key"
+      ]
+    },
+    {
+      "id": "hud_cooldown",
+      "text": "Catch your breath... {secs}s",
+      "color": "sand",
+      "fields": [
+        "secs"
+      ]
+    },
+    {
+      "id": "hud_stunned",
+      "text": "You're on! Hold on...",
+      "color": "spice",
+      "fields": []
+    },
+    {
+      "id": "hud_wild",
+      "text": "{arrows}\nBOND {bar} {pct}%\nStall in {secs}s",
+      "color": "spice",
+      "fields": [
+        "arrows",
+        "bar",
+        "pct",
+        "secs"
+      ]
+    },
+    {
+      "id": "hud_thrown",
+      "text": "Shai-Hulud threw you!\nLure it back with a thumper.",
+      "color": "danger",
+      "fields": []
+    },
+    {
+      "id": "hud_tamed",
+      "text": "SHAI-HULUD IS YOURS",
+      "color": "spice",
+      "fields": []
+    },
+    {
+      "id": "hud_ride",
+      "text": "{speed} km/h   {mode}\n{boost_line}\n{controls}",
+      "color": "sand",
+      "fields": [
+        "speed",
+        "mode",
+        "boost_line",
+        "controls"
+      ]
+    },
+    {
+      "id": "hud_wait",
+      "text": "Your worm waits.  [{call_key}] call   [{leap_key}] remount when close ({dist} m)",
+      "color": "sand",
+      "fields": [
+        "call_key",
+        "leap_key",
+        "dist"
+      ]
+    },
+    {
+      "id": "hud_lost",
+      "text": "Your worm returned to the deep.",
+      "color": "danger",
+      "fields": []
+    },
+    {
+      "id": "hud_loaded",
+      "text": "Worm Rider loaded. Plant a thumper and press [{leap_key}] when a worm is close.",
+      "color": "sand",
+      "fields": [
+        "leap_key"
+      ]
+    },
+    {
+      "id": "hud_too_far",
+      "text": "Your worm can't hear you ({dist} m). Get closer.",
+      "color": "danger",
+      "fields": [
+        "dist"
+      ]
+    },
+    {
+      "id": "hud_radar",
+      "text": "Shai-Hulud  {dist} m\nPress [{leap_key}] to ready your hook",
+      "color": "sand",
+      "fields": [
+        "dist",
+        "leap_key"
+      ]
+    },
+    {
+      "id": "hud_ready",
+      "text": "HOOK READY  -  Shai-Hulud {dist} m\nStand your ground. You leap on when it is close.  [{leap_key}] cancel",
+      "color": "spice",
+      "fields": [
+        "dist",
+        "leap_key"
+      ]
+    },
+    {
+      "id": "hud_ready_none",
+      "text": "HOOK READY  -  walk on open sand or plant a thumper.  [{leap_key}] cancel",
+      "color": "spice",
+      "fields": [
+        "leap_key"
+      ]
+    },
+    {
+      "id": "hud_body",
+      "text": "{what} height {h} m",
+      "color": "sand",
+      "fields": [
+        "what",
+        "h"
+      ]
+    },
+    {
+      "id": "hud_double_on",
+      "text": "Worm double on  -  PgUp/PgDn to raise it",
+      "color": "spice",
+      "fields": []
+    },
+    {
+      "id": "hud_double_off",
+      "text": "Worm double off",
+      "color": "sand",
+      "fields": []
+    },
+    {
+      "id": "hud_double_fail",
+      "text": "Couldn't make a worm double ({why})",
+      "color": "danger",
+      "fields": [
+        "why"
+      ]
+    },
+    {
+      "id": "hud_pose",
+      "text": "Riding pose {i}/{n}: {name}",
+      "color": "sand",
+      "fields": [
+        "i",
+        "n",
+        "name"
+      ]
+    },
+    {
+      "id": "hud_pose_off",
+      "text": "Cross-legged riding pose",
+      "color": "sand",
+      "fields": []
+    },
+    {
+      "id": "hud_pose_none",
+      "text": "No other riding poses loaded right now",
+      "color": "danger",
+      "fields": []
+    },
+    {
+      "id": "hud_seat",
+      "text": "Seat height {h} m",
+      "color": "sand",
+      "fields": [
+        "h"
+      ]
+    },
+    {
+      "id": "hud_controls",
+      "text": "[W/S] speed  [A/D] steer  [Space] breach  [Shift] dive  [{leap_key}] dismount\n[Home/End] sit higher/lower  [PgUp/PgDn] worm height  [F7] pose  [F8] worm body  [F6] hide",
+      "color": "sand",
+      "fields": [
+        "leap_key"
+      ]
+    },
+    {
+      "id": "hud_controls_hidden",
+      "text": "[F6] controls",
+      "color": "sand",
+      "fields": []
+    }
+  ],
+  "colors": {
+    "sand": [
+      0.95,
+      0.88,
+      0.7,
+      1.0
+    ],
+    "spice": [
+      1.0,
+      0.62,
+      0.18,
+      1.0
+    ],
+    "danger": [
+      1.0,
+      0.3,
+      0.25,
+      1.0
+    ]
+  }
+}

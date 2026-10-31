@@ -1,0 +1,46 @@
+{
+  "sheet": "bone_skip",
+  "about": "Bone names that are never used as the rider's seat (fixed or helper bones that do not move with the body). One row = one name part, matched case-insensitively.",
+  "columns": [
+    "id",
+    "part",
+    "why"
+  ],
+  "rows": [
+    {
+      "id": "b_root",
+      "part": "root",
+      "why": "the fixed centre point - the body sways around it (in-game ride log 2026-10-30)"
+    },
+    {
+      "id": "b_ik",
+      "part": "ik_",
+      "why": "inverse-kinematics helpers"
+    },
+    {
+      "id": "b_attach",
+      "part": "attach",
+      "why": "attachment helpers"
+    },
+    {
+      "id": "b_socket",
+      "part": "socket",
+      "why": "socket helpers"
+    },
+    {
+      "id": "b_vb",
+      "part": "vb ",
+      "why": "virtual bones"
+    },
+    {
+      "id": "b_move",
+      "part": "move",
+      "why": "a second fixed centre point (in-game ride log 2026-10-30)"
+    },
+    {
+      "id": "b_mouth",
+      "part": "mouth",
+      "why": "mouth bones swing open and shut"
+    }
+  ]
+}
