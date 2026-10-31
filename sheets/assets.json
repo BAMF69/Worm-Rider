@@ -1,0 +1,21 @@
+{
+  "sheet": "assets",
+  "about": "Other objects from the player's own install the mod uses. One row = one object; path is the in-game object path (found in the game's pak index).",
+  "columns": [
+    "id",
+    "path",
+    "use"
+  ],
+  "rows": [
+    {
+      "id": "wire_mesh",
+      "path": "/Engine/BasicShapes/Cylinder.Cylinder",
+      "use": "shape of the Shigawire wire (stretched thin)"
+    },
+    {
+      "id": "wire_material",
+      "path": "/Game/Dune/Environment/Props/Neut/ShigawirePlayer/Materials/ML_Env_Prop_Neut_Shigawire_Player.ML_Env_Prop_Neut_Shigawire_Player",
+      "use": "the Shigawire look on the wire"
+    }
+  ]
+}

@@ -1,0 +1,670 @@
+{
+  "sheet": "game_refs",
+  "about": "Every hook into Dune: Awakening and Unreal Engine the mod touches. One row = one class, function, property or launch argument.",
+  "columns": [
+    "id",
+    "kind",
+    "name",
+    "owner",
+    "used_for",
+    "source"
+  ],
+  "rows": [
+    {
+      "id": "worm_class",
+      "kind": "class",
+      "name": "BP_Crea_SandwormArrakis_C",
+      "owner": "/Game/Dune/Creatures/Sandworm/Sandworm_Arrakis/BP_Crea_SandwormArrakis",
+      "used_for": "find the Hagga Basin sandworm pawns",
+      "source": "game config key m_SandwormPawnClass (shipped DuneSandbox config, indexed by DASH SERVER_CONFIG_KEY_INDEX.md)"
+    },
+    {
+      "id": "worm_name_hint",
+      "kind": "name_match",
+      "name": "Sandworm",
+      "owner": "Pawn",
+      "used_for": "fallback scan for other worm subclasses (Deep Desert giant worm)",
+      "source": "class path naming /Game/Dune/Creatures/Sandworm/"
+    },
+    {
+      "id": "player_controller",
+      "kind": "class",
+      "name": "PlayerController",
+      "owner": "/Script/Engine",
+      "used_for": "local player, held-key input",
+      "source": "Unreal Engine 5 APlayerController"
+    },
+    {
+      "id": "fn_get_loc",
+      "kind": "function",
+      "name": "K2_GetActorLocation",
+      "owner": "Actor",
+      "used_for": "read worm and rider positions",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "fn_set_loc",
+      "kind": "function",
+      "name": "K2_SetActorLocation",
+      "owner": "Actor",
+      "used_for": "drive the worm, carry the rider",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "fn_get_rot",
+      "kind": "function",
+      "name": "K2_GetActorRotation",
+      "owner": "Actor",
+      "used_for": "read worm heading at tame start",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "fn_set_rot",
+      "kind": "function",
+      "name": "K2_SetActorRotation",
+      "owner": "Actor",
+      "used_for": "steer the worm",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "fn_collision",
+      "kind": "function",
+      "name": "SetActorEnableCollision",
+      "owner": "Actor",
+      "used_for": "rider ignores the worm's body and the 1.1.20 contact kill",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "prop_dilation",
+      "kind": "property",
+      "name": "CustomTimeDilation",
+      "owner": "Actor",
+      "used_for": "stun window when you leap on",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "prop_controller",
+      "kind": "property",
+      "name": "Controller",
+      "owner": "Pawn",
+      "used_for": "worm AI controller to release and restore",
+      "source": "Unreal Engine 5 APawn"
+    },
+    {
+      "id": "fn_unpossess",
+      "kind": "function",
+      "name": "UnPossess",
+      "owner": "Controller",
+      "used_for": "old way to switch off worm AI (crashes when the worm has an attack queued; only with release_ai=1)",
+      "source": "Unreal Engine 5 AController"
+    },
+    {
+      "id": "fn_possess",
+      "kind": "function",
+      "name": "Possess",
+      "owner": "Controller",
+      "used_for": "give the worm its AI back when it throws you",
+      "source": "Unreal Engine 5 AController"
+    },
+    {
+      "id": "fn_key_down",
+      "kind": "function",
+      "name": "IsInputKeyDown",
+      "owner": "PlayerController",
+      "used_for": "held steering keys",
+      "source": "Unreal Engine 5 APlayerController"
+    },
+    {
+      "id": "fn_movement_mode",
+      "kind": "function",
+      "name": "SetMovementMode",
+      "owner": "CharacterMovementComponent",
+      "used_for": "freeze rider walking while mounted",
+      "source": "Unreal Engine 5 UCharacterMovementComponent"
+    },
+    {
+      "id": "prop_char_move",
+      "kind": "property",
+      "name": "CharacterMovement",
+      "owner": "Character",
+      "used_for": "reach the rider's movement component",
+      "source": "Unreal Engine 5 ACharacter"
+    },
+    {
+      "id": "fn_launch",
+      "kind": "function",
+      "name": "LaunchCharacter",
+      "owner": "Character",
+      "used_for": "fling the rider when thrown",
+      "source": "Unreal Engine 5 ACharacter"
+    },
+    {
+      "id": "fn_trace",
+      "kind": "function",
+      "name": "LineTraceSingle",
+      "owner": "/Script/Engine.Default__KismetSystemLibrary",
+      "used_for": "find the sand surface under the worm",
+      "source": "Unreal Engine 5 UKismetSystemLibrary (pattern from bundled UE4SS LineTraceMod)"
+    },
+    {
+      "id": "cls_user_widget",
+      "kind": "class",
+      "name": "UserWidget",
+      "owner": "/Script/UMG",
+      "used_for": "on-screen arrows and bond bar",
+      "source": "Unreal Engine 5 UMG"
+    },
+    {
+      "id": "cls_widget_tree",
+      "kind": "class",
+      "name": "WidgetTree",
+      "owner": "/Script/UMG",
+      "used_for": "hold the HUD text",
+      "source": "Unreal Engine 5 UMG"
+    },
+    {
+      "id": "cls_text_block",
+      "kind": "class",
+      "name": "TextBlock",
+      "owner": "/Script/UMG",
+      "used_for": "HUD text",
+      "source": "Unreal Engine 5 UMG"
+    },
+    {
+      "id": "cli_nobattleye",
+      "kind": "launch_arg",
+      "name": "-nobattleye",
+      "owner": "DuneSandbox-Win64-Shipping.exe",
+      "used_for": "Solo session without BattlEye, required for any mod loader",
+      "source": "game argument used by DST and WPS Solo launchers"
+    },
+    {
+      "id": "cli_ue4ss_path",
+      "kind": "launch_arg",
+      "name": "--ue4ss-path",
+      "owner": "dwmapi.dll (UE4SS proxy)",
+      "used_for": "point the loader at the bundled UE4SS",
+      "source": "UE4SS proxy argument used by DST launcher"
+    },
+    {
+      "id": "prop_pawn",
+      "kind": "property",
+      "name": "Pawn",
+      "owner": "Controller",
+      "used_for": "the local player's character",
+      "source": "Unreal Engine 5 AController"
+    },
+    {
+      "id": "fn_is_local",
+      "kind": "function",
+      "name": "IsLocalPlayerController",
+      "owner": "PlayerController",
+      "used_for": "pick the local player's controller",
+      "source": "Unreal Engine 5 AController"
+    },
+    {
+      "id": "fn_game_time",
+      "kind": "function",
+      "name": "GetGameTimeInSeconds",
+      "owner": "/Script/Engine.Default__KismetSystemLibrary",
+      "used_for": "wall clock for timers and smooth movement",
+      "source": "Unreal Engine 5 UKismetSystemLibrary"
+    },
+    {
+      "id": "cls_canvas_panel",
+      "kind": "class",
+      "name": "CanvasPanel",
+      "owner": "/Script/UMG",
+      "used_for": "position the HUD on screen",
+      "source": "Unreal Engine 5 UMG"
+    },
+    {
+      "id": "fn_widget_create",
+      "kind": "function",
+      "name": "Create",
+      "owner": "/Script/UMG.Default__WidgetBlueprintLibrary",
+      "used_for": "create the HUD widget for the local player",
+      "source": "Unreal Engine 5 UWidgetBlueprintLibrary"
+    },
+    {
+      "id": "fn_get_components",
+      "kind": "function",
+      "name": "K2_GetComponentsByClass",
+      "owner": "Actor",
+      "used_for": "list the worm's visible mesh parts",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "cls_skel_comp",
+      "kind": "class",
+      "name": "SkeletalMeshComponent",
+      "owner": "/Script/Engine",
+      "used_for": "the worm's animated body",
+      "source": "Unreal Engine 5 USkeletalMeshComponent"
+    },
+    {
+      "id": "fn_comp_loc",
+      "kind": "function",
+      "name": "K2_GetComponentLocation",
+      "owner": "SceneComponent",
+      "used_for": "log where the worm body really is",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "prop_rel_loc",
+      "kind": "property",
+      "name": "RelativeLocation",
+      "owner": "SceneComponent",
+      "used_for": "remember the body's original offset",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "prop_rel_rot",
+      "kind": "property",
+      "name": "RelativeRotation",
+      "owner": "SceneComponent",
+      "used_for": "copy the body's rotation onto the double",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "fn_set_rel_loc",
+      "kind": "function",
+      "name": "K2_SetRelativeLocation",
+      "owner": "SceneComponent",
+      "used_for": "raise the real body (experimental) and place the double's body",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "fn_set_rel_rot",
+      "kind": "function",
+      "name": "K2_SetRelativeRotation",
+      "owner": "SceneComponent",
+      "used_for": "match the double's body rotation",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "fn_comp_scale",
+      "kind": "function",
+      "name": "K2_GetComponentScale",
+      "owner": "SceneComponent",
+      "used_for": "match the double's size to the worm",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "fn_set_scale",
+      "kind": "function",
+      "name": "SetWorldScale3D",
+      "owner": "SceneComponent",
+      "used_for": "match the double's size to the worm",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "fn_get_mesh",
+      "kind": "function",
+      "name": "GetSkeletalMeshAsset",
+      "owner": "SkeletalMeshComponent",
+      "used_for": "read the worm model from the player's own game",
+      "source": "Unreal Engine 5 USkeletalMeshComponent (5.1+)"
+    },
+    {
+      "id": "prop_mesh_old",
+      "kind": "property",
+      "name": "SkeletalMesh",
+      "owner": "SkinnedMeshComponent",
+      "used_for": "fallback way to read the worm model",
+      "source": "Unreal Engine 5 USkinnedMeshComponent (pre-5.1 name)"
+    },
+    {
+      "id": "cls_skel_actor",
+      "kind": "class",
+      "name": "SkeletalMeshActor",
+      "owner": "/Script/Engine",
+      "used_for": "the sand-height worm double",
+      "source": "Unreal Engine 5 ASkeletalMeshActor"
+    },
+    {
+      "id": "prop_skel_actor_comp",
+      "kind": "property",
+      "name": "SkeletalMeshComponent",
+      "owner": "SkeletalMeshActor",
+      "used_for": "the double's body",
+      "source": "Unreal Engine 5 ASkeletalMeshActor"
+    },
+    {
+      "id": "fn_spawn",
+      "kind": "function",
+      "name": "BeginDeferredActorSpawnFromClass",
+      "owner": "/Script/Engine.Default__GameplayStatics",
+      "used_for": "spawn the double",
+      "source": "Unreal Engine 5 UGameplayStatics"
+    },
+    {
+      "id": "fn_finish_spawn",
+      "kind": "function",
+      "name": "FinishSpawningActor",
+      "owner": "/Script/Engine.Default__GameplayStatics",
+      "used_for": "finish spawning the double",
+      "source": "Unreal Engine 5 UGameplayStatics"
+    },
+    {
+      "id": "fn_set_mesh",
+      "kind": "function",
+      "name": "SetSkeletalMeshAsset",
+      "owner": "SkeletalMeshComponent",
+      "used_for": "give the double the worm's model",
+      "source": "Unreal Engine 5 USkeletalMeshComponent (5.1+)"
+    },
+    {
+      "id": "fn_set_mesh_old",
+      "kind": "function",
+      "name": "SetSkeletalMesh",
+      "owner": "SkinnedMeshComponent",
+      "used_for": "fallback way to give the double the model",
+      "source": "Unreal Engine 5 USkinnedMeshComponent"
+    },
+    {
+      "id": "fn_leader",
+      "kind": "function",
+      "name": "SetLeaderPoseComponent",
+      "owner": "SkinnedMeshComponent",
+      "used_for": "make the double copy the real worm's animation",
+      "source": "Unreal Engine 5 USkinnedMeshComponent (5.1+; takes leader, bForceUpdate, bFollowerShouldTickPose)"
+    },
+    {
+      "id": "fn_leader_old",
+      "kind": "function",
+      "name": "SetMasterPoseComponent",
+      "owner": "SkinnedMeshComponent",
+      "used_for": "fallback for copying the animation",
+      "source": "Unreal Engine 5 USkinnedMeshComponent (pre-5.1 name)"
+    },
+    {
+      "id": "fn_destroy",
+      "kind": "function",
+      "name": "K2_DestroyActor",
+      "owner": "Actor",
+      "used_for": "remove the double",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "cls_actor_comp",
+      "kind": "class",
+      "name": "ActorComponent",
+      "owner": "/Script/Engine",
+      "used_for": "list every part of the worm for the log",
+      "source": "Unreal Engine 5 UActorComponent"
+    },
+    {
+      "id": "cls_skinned_comp",
+      "kind": "class",
+      "name": "SkinnedMeshComponent",
+      "owner": "/Script/Engine",
+      "used_for": "search the world for the worm's animated body if it is not on the worm itself",
+      "source": "Unreal Engine 5 USkinnedMeshComponent"
+    },
+    {
+      "id": "cls_anim_seq",
+      "kind": "class",
+      "name": "AnimationAsset",
+      "owner": "/Script/Engine",
+      "used_for": "F7: find other human riding poses already loaded (sequences and blend spaces)",
+      "source": "Unreal Engine 5 UAnimationAsset"
+    },
+    {
+      "id": "prop_char_mesh",
+      "kind": "property",
+      "name": "Mesh",
+      "owner": "Character",
+      "used_for": "the rider's body for the riding pose",
+      "source": "Unreal Engine 5 ACharacter"
+    },
+    {
+      "id": "fn_play_anim",
+      "kind": "function",
+      "name": "PlayAnimation",
+      "owner": "SkeletalMeshComponent",
+      "used_for": "play the chosen riding pose on the rider",
+      "source": "Unreal Engine 5 USkeletalMeshComponent"
+    },
+    {
+      "id": "fn_anim_mode",
+      "kind": "function",
+      "name": "SetAnimationMode",
+      "owner": "SkeletalMeshComponent",
+      "used_for": "give the rider their normal animations back",
+      "source": "Unreal Engine 5 USkeletalMeshComponent (takes mode and bForceInitAnimScriptInstance)"
+    },
+    {
+      "id": "prop_worm_mesh",
+      "kind": "property",
+      "name": "SandwormSkeletalMesh",
+      "owner": "BP_Crea_SandwormArrakis_C",
+      "used_for": "the worm's animated body, read directly",
+      "source": "seen in game: Survival_1 PersistentLevel.BP_Crea_SandwormArrakis_C_*.SandwormSkeletalMesh (mount log 2026-10-30)"
+    },
+    {
+      "id": "fn_stop_movement",
+      "kind": "function",
+      "name": "StopMovement",
+      "owner": "Controller",
+      "used_for": "stop the worm AI steering while ridden",
+      "source": "Unreal Engine 5 AController"
+    },
+    {
+      "id": "prop_brain",
+      "kind": "property",
+      "name": "BrainComponent",
+      "owner": "AIController",
+      "used_for": "pause the worm's decision making while ridden",
+      "source": "Unreal Engine 5 AAIController"
+    },
+    {
+      "id": "fn_stop_logic",
+      "kind": "function",
+      "name": "StopLogic",
+      "owner": "BrainComponent",
+      "used_for": "pause the worm's decisions",
+      "source": "Unreal Engine 5 UBrainComponent"
+    },
+    {
+      "id": "fn_restart_logic",
+      "kind": "function",
+      "name": "RestartLogic",
+      "owner": "BrainComponent",
+      "used_for": "resume the worm's decisions",
+      "source": "Unreal Engine 5 UBrainComponent"
+    },
+    {
+      "id": "fn_comp_rot",
+      "kind": "function",
+      "name": "K2_GetComponentRotation",
+      "owner": "SceneComponent",
+      "used_for": "read which way the real worm body faces",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "fn_set_world_rot",
+      "kind": "function",
+      "name": "K2_SetWorldRotation",
+      "owner": "SceneComponent",
+      "used_for": "turn the double's body the same way as the real one",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "cls_static_mesh_actor",
+      "kind": "class",
+      "name": "StaticMeshActor",
+      "owner": "/Script/Engine",
+      "used_for": "the Shigawire wire",
+      "source": "Unreal Engine 5 AStaticMeshActor"
+    },
+    {
+      "id": "prop_smc",
+      "kind": "property",
+      "name": "StaticMeshComponent",
+      "owner": "StaticMeshActor",
+      "used_for": "the wire's mesh",
+      "source": "Unreal Engine 5 AStaticMeshActor"
+    },
+    {
+      "id": "fn_set_static_mesh",
+      "kind": "function",
+      "name": "SetStaticMesh",
+      "owner": "StaticMeshComponent",
+      "used_for": "give the wire its cylinder shape",
+      "source": "Unreal Engine 5 UStaticMeshComponent"
+    },
+    {
+      "id": "fn_set_material",
+      "kind": "function",
+      "name": "SetMaterial",
+      "owner": "PrimitiveComponent",
+      "used_for": "give the wire the Shigawire material",
+      "source": "Unreal Engine 5 UPrimitiveComponent"
+    },
+    {
+      "id": "fn_set_mobility",
+      "kind": "function",
+      "name": "SetMobility",
+      "owner": "SceneComponent",
+      "used_for": "let the wire move every frame",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "fn_actor_scale",
+      "kind": "function",
+      "name": "SetActorScale3D",
+      "owner": "Actor",
+      "used_for": "stretch the wire to the right length",
+      "source": "Unreal Engine 5 AActor"
+    },
+    {
+      "id": "fn_rot_from_z",
+      "kind": "function",
+      "name": "MakeRotFromZ",
+      "owner": "/Script/Engine.Default__KismetMathLibrary",
+      "used_for": "point the wire from your hand to the worm",
+      "source": "Unreal Engine 5 UKismetMathLibrary"
+    },
+    {
+      "id": "fn_num_bones",
+      "kind": "function",
+      "name": "GetNumBones",
+      "owner": "SkinnedMeshComponent",
+      "used_for": "look through the double's bones",
+      "source": "Unreal Engine 5 USkinnedMeshComponent"
+    },
+    {
+      "id": "fn_bone_name",
+      "kind": "function",
+      "name": "GetBoneName",
+      "owner": "SkinnedMeshComponent",
+      "used_for": "look through the double's bones",
+      "source": "Unreal Engine 5 USkinnedMeshComponent"
+    },
+    {
+      "id": "fn_socket_loc",
+      "kind": "function",
+      "name": "GetSocketLocation",
+      "owner": "SceneComponent",
+      "used_for": "follow the bone you sit on",
+      "source": "Unreal Engine 5 USceneComponent"
+    },
+    {
+      "id": "fn_set_coll_enabled",
+      "kind": "function",
+      "name": "SetCollisionEnabled",
+      "owner": "PrimitiveComponent",
+      "used_for": "let the double's body be traced (query only)",
+      "source": "Unreal Engine 5 UPrimitiveComponent"
+    },
+    {
+      "id": "fn_set_resp_all",
+      "kind": "function",
+      "name": "SetCollisionResponseToAllChannels",
+      "owner": "PrimitiveComponent",
+      "used_for": "make the double ignore everything else in the world",
+      "source": "Unreal Engine 5 UPrimitiveComponent"
+    },
+    {
+      "id": "fn_trace_comp",
+      "kind": "function",
+      "name": "K2_LineTraceComponent",
+      "owner": "PrimitiveComponent",
+      "used_for": "find the top of the double's body under the rider",
+      "source": "Unreal Engine 5 UPrimitiveComponent"
+    },
+    {
+      "id": "fn_set_position",
+      "kind": "function",
+      "name": "SetPosition",
+      "owner": "SkeletalMeshComponent",
+      "used_for": "jump the riding pose to its last frame",
+      "source": "Unreal Engine 5 USkeletalMeshComponent"
+    },
+    {
+      "id": "fn_set_play_rate",
+      "kind": "function",
+      "name": "SetPlayRate",
+      "owner": "SkeletalMeshComponent",
+      "used_for": "freeze the riding pose",
+      "source": "Unreal Engine 5 USkeletalMeshComponent"
+    },
+    {
+      "id": "fn_play_length",
+      "kind": "function",
+      "name": "GetPlayLength",
+      "owner": "AnimSequenceBase",
+      "used_for": "find the last frame of the riding pose",
+      "source": "Unreal Engine 5 UAnimSequenceBase"
+    },
+    {
+      "id": "hook_end_play",
+      "kind": "hook",
+      "name": "EndPlay",
+      "owner": "UE4SS RegisterEndPlayPreHook (AActor::EndPlay)",
+      "used_for": "drop the mod's hold on the worm, its body, the double or the rider before the game deletes them (in-game crash 2026-10-30 22:18 after a 758-package unload)",
+      "source": "UE4SS hook list in UE4SS.log: [UE4SS.EndPlay.LuaModImpl]"
+    },
+    {
+      "id": "fn_get_owner",
+      "kind": "function",
+      "name": "GetOwner",
+      "owner": "ActorComponent",
+      "used_for": "know which actor the worm body belongs to",
+      "source": "Unreal Engine 5 UActorComponent"
+    },
+    {
+      "id": "hook_load_map",
+      "kind": "hook",
+      "name": "LoadMap",
+      "owner": "UE4SS RegisterLoadMapPreHook",
+      "used_for": "forget everything when the map changes (travel, respawn to menu)",
+      "source": "UE4SS hook list in UE4SS.log: [UE4SS.LoadMap.LuaModImpl]"
+    },
+    {
+      "id": "prop_anim_class",
+      "kind": "property",
+      "name": "AnimClass",
+      "owner": "SkeletalMeshComponent",
+      "used_for": "remember the rider's own animation setup",
+      "source": "Unreal Engine 5 USkeletalMeshComponent"
+    },
+    {
+      "id": "fn_set_anim_class",
+      "kind": "function",
+      "name": "SetAnimInstanceClass",
+      "owner": "SkeletalMeshComponent",
+      "used_for": "give the rider's own animations back if switching modes fails",
+      "source": "Unreal Engine 5 USkeletalMeshComponent"
+    },
+    {
+      "id": "fn_set_visibility",
+      "kind": "function",
+      "name": "SetVisibility",
+      "owner": "Widget",
+      "used_for": "make the mod's text ignore clicks, and hide it when empty",
+      "source": "Unreal Engine 5 UWidget (ESlateVisibility)"
+    }
+  ]
+}

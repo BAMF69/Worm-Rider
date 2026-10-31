@@ -1,0 +1,41 @@
+{
+  "sheet": "anims",
+  "about": "Animations from the player's own Dune install that the mod plays on the rider. One row = one animation; path is the in-game object path (found in the game's pak index). hold_end = jump to the last frame and freeze there.",
+  "columns": [
+    "id",
+    "path",
+    "loop",
+    "hold_end",
+    "use"
+  ],
+  "rows": [
+    {
+      "id": "shig_in",
+      "path": "/Game/Dune/Animations/Humans/Common/NoWeapon/Gadgets/SardaukarPull/A_Human_SardPull_01_In.A_Human_SardPull_01_In",
+      "loop": false,
+      "hold_end": false,
+      "use": "Shigawire Claw throw as you leap"
+    },
+    {
+      "id": "shig_loop",
+      "path": "/Game/Dune/Animations/Humans/Common/NoWeapon/Gadgets/SardaukarPull/A_Human_SardPull_01_Loop.A_Human_SardPull_01_Loop",
+      "loop": true,
+      "hold_end": false,
+      "use": "reeled in along the claw's wire"
+    },
+    {
+      "id": "shig_land",
+      "path": "/Game/Dune/Animations/Humans/Common/NoWeapon/Gadgets/SardaukarPull/A_Human_SardPull_01_Out_Air.A_Human_SardPull_01_Out_Air",
+      "loop": false,
+      "hold_end": false,
+      "use": "landing on the worm's back"
+    },
+    {
+      "id": "ride_sit",
+      "path": "/Game/Dune/Animations/Humans/Common/NPC/Civilian/A_Human_Sit_Ground_01_In_01.A_Human_Sit_Ground_01_In_01",
+      "loop": false,
+      "hold_end": true,
+      "use": "riding pose: the last frame of sitting down cross-legged (picked in game from F7)"
+    }
+  ]
+}

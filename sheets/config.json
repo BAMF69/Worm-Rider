@@ -1,0 +1,402 @@
+{
+  "sheet": "config",
+  "about": "Every tunable number. One row = one value. Distances in Unreal centimetres, times in seconds.",
+  "columns": [
+    "id",
+    "value",
+    "unit",
+    "meaning"
+  ],
+  "rows": [
+    {
+      "id": "tick_ms",
+      "value": 16,
+      "unit": "ms",
+      "meaning": "update rate while riding"
+    },
+    {
+      "id": "scan_ms",
+      "value": 400,
+      "unit": "ms",
+      "meaning": "worm scan rate while idle"
+    },
+    {
+      "id": "leap_range",
+      "value": 7000,
+      "unit": "cm",
+      "meaning": "how close a worm must be to leap on"
+    },
+    {
+      "id": "stun_seconds",
+      "value": 1.5,
+      "unit": "s",
+      "meaning": "the worm reels after you land on it"
+    },
+    {
+      "id": "sequence_length",
+      "value": 4,
+      "unit": "arrows",
+      "meaning": "arrows per trick sequence"
+    },
+    {
+      "id": "sequence_seconds",
+      "value": 6.0,
+      "unit": "s",
+      "meaning": "time to finish a sequence before it throws you (a stall)"
+    },
+    {
+      "id": "sequences_to_tame",
+      "value": 8,
+      "unit": "sequences",
+      "meaning": "sequences to fill the bond bar"
+    },
+    {
+      "id": "thrown_cooldown",
+      "value": 8.0,
+      "unit": "s",
+      "meaning": "before you can leap again after being thrown"
+    },
+    {
+      "id": "thrown_distance",
+      "value": 1800,
+      "unit": "cm",
+      "meaning": "how far to the side you land when thrown"
+    },
+    {
+      "id": "thrown_launch_up",
+      "value": 1400,
+      "unit": "cm/s",
+      "meaning": "upward fling when thrown"
+    },
+    {
+      "id": "wild_speed",
+      "value": 2600,
+      "unit": "cm/s",
+      "meaning": "untamed surfing speed"
+    },
+    {
+      "id": "wild_turn_rate",
+      "value": 35,
+      "unit": "deg/s",
+      "meaning": "max untamed wander turn"
+    },
+    {
+      "id": "wild_wander_seconds",
+      "value": 1.6,
+      "unit": "s",
+      "meaning": "how often the wild worm picks a new turn"
+    },
+    {
+      "id": "ride_speed",
+      "value": 3200,
+      "unit": "cm/s",
+      "meaning": "tamed top speed holding W"
+    },
+    {
+      "id": "cruise_speed",
+      "value": 1400,
+      "unit": "cm/s",
+      "meaning": "tamed speed with no keys"
+    },
+    {
+      "id": "boost_speed",
+      "value": 5200,
+      "unit": "cm/s",
+      "meaning": "speed while trick boost is active"
+    },
+    {
+      "id": "accel",
+      "value": 1800,
+      "unit": "cm/s2",
+      "meaning": "speed change rate"
+    },
+    {
+      "id": "turn_rate",
+      "value": 55,
+      "unit": "deg/s",
+      "meaning": "tamed turn rate"
+    },
+    {
+      "id": "dive_depth",
+      "value": 900,
+      "unit": "cm",
+      "meaning": "how far the rider drops toward the sand while diving (the worm itself is never moved up or down)"
+    },
+    {
+      "id": "rider_height",
+      "value": 400,
+      "unit": "cm",
+      "meaning": "rider height above the sand while surfacing"
+    },
+    {
+      "id": "rider_dive_height",
+      "value": 120,
+      "unit": "cm",
+      "meaning": "rider height above the sand while diving"
+    },
+    {
+      "id": "rider_back",
+      "value": 0,
+      "unit": "cm",
+      "meaning": "rider distance behind the worm's position point"
+    },
+    {
+      "id": "worm_yaw_offset",
+      "value": 0,
+      "unit": "deg",
+      "meaning": "turn the worm mesh if its forward axis is not X"
+    },
+    {
+      "id": "breach_height",
+      "value": 1800,
+      "unit": "cm",
+      "meaning": "peak of a breach leap"
+    },
+    {
+      "id": "breach_seconds",
+      "value": 1.6,
+      "unit": "s",
+      "meaning": "breach leap duration"
+    },
+    {
+      "id": "breach_cooldown",
+      "value": 6.0,
+      "unit": "s",
+      "meaning": "between breaches"
+    },
+    {
+      "id": "boost_sequences",
+      "value": 3,
+      "unit": "sequences",
+      "meaning": "dive tricks to fill the boost bar"
+    },
+    {
+      "id": "boost_seconds",
+      "value": 5.0,
+      "unit": "s",
+      "meaning": "boost duration"
+    },
+    {
+      "id": "call_range",
+      "value": 60000,
+      "unit": "cm",
+      "meaning": "how far away your worm hears the call"
+    },
+    {
+      "id": "call_speed",
+      "value": 3600,
+      "unit": "cm/s",
+      "meaning": "worm speed when called"
+    },
+    {
+      "id": "call_stop_distance",
+      "value": 1500,
+      "unit": "cm",
+      "meaning": "where a called worm stops"
+    },
+    {
+      "id": "remount_range",
+      "value": 3000,
+      "unit": "cm",
+      "meaning": "how close to remount your waiting worm"
+    },
+    {
+      "id": "trace_half_height",
+      "value": 30000,
+      "unit": "cm",
+      "meaning": "sand-surface trace reach above and below"
+    },
+    {
+      "id": "hud_bar_cells",
+      "value": 20,
+      "unit": "cells",
+      "meaning": "width of the text bars"
+    },
+    {
+      "id": "hud_font_size",
+      "value": 26,
+      "unit": "pt",
+      "meaning": "HUD text size"
+    },
+    {
+      "id": "hud_anchor_y",
+      "value": 0.72,
+      "unit": "screen",
+      "meaning": "HUD vertical position (0 top, 1 bottom)"
+    },
+    {
+      "id": "dismount_offset",
+      "value": 800,
+      "unit": "cm",
+      "meaning": "how far beside the worm you land when you dismount"
+    },
+    {
+      "id": "release_ai",
+      "value": 0,
+      "unit": "0/1",
+      "meaning": "0 = keep the worm's AI controller attached and pause it (safe); 1 = detach it (crashes if the worm has an attack queued, per Dune crash logs 2026-10-30)"
+    },
+    {
+      "id": "flash_seconds",
+      "value": 2.5,
+      "unit": "s",
+      "meaning": "how long one-off messages stay on screen"
+    },
+    {
+      "id": "fallback_scan_seconds",
+      "value": 3.0,
+      "unit": "s",
+      "meaning": "how often to search all pawns for other worm types"
+    },
+    {
+      "id": "radar_range",
+      "value": 50000,
+      "unit": "cm",
+      "meaning": "show an approaching worm's distance from this far"
+    },
+    {
+      "id": "capsule_half_height",
+      "value": 90,
+      "unit": "cm",
+      "meaning": "distance from the player's position point down to their feet (used when the sand trace fails)"
+    },
+    {
+      "id": "body_step",
+      "value": 200,
+      "unit": "cm",
+      "meaning": "how much one PgUp/PgDn press moves a worm body"
+    },
+    {
+      "id": "rider_face_forward",
+      "value": 1,
+      "unit": "0/1",
+      "meaning": "1 = the rider always faces the way the worm is travelling (camera stays free)"
+    },
+    {
+      "id": "pose_scan_max",
+      "value": 40,
+      "unit": "animations",
+      "meaning": "most riding-pose candidates to collect"
+    },
+    {
+      "id": "body_scan_max",
+      "value": 15,
+      "unit": "parts",
+      "meaning": "most worm body candidates to log from the world search"
+    },
+    {
+      "id": "body_search_radius",
+      "value": 30000,
+      "unit": "cm",
+      "meaning": "how close a worm-named body part must be to the ridden worm"
+    },
+    {
+      "id": "double_sand_offset",
+      "value": -200,
+      "unit": "cm",
+      "meaning": "where the double's origin sits relative to the sand (tuned in game with PgUp/PgDn)"
+    },
+    {
+      "id": "arc_height",
+      "value": 700,
+      "unit": "cm",
+      "meaning": "how high the claw pull arcs you on the way onto the worm"
+    },
+    {
+      "id": "claw_throw_fraction",
+      "value": 0.3,
+      "unit": "0..1",
+      "meaning": "part of the leap spent on the throw before the reel loop starts"
+    },
+    {
+      "id": "land_seconds",
+      "value": 0.7,
+      "unit": "s",
+      "meaning": "how long the landing animation plays before the riding pose"
+    },
+    {
+      "id": "ride_anims",
+      "value": 1,
+      "unit": "0/1",
+      "meaning": "1 = play the claw and sandbike rider animations"
+    },
+    {
+      "id": "auto_double",
+      "value": 1,
+      "unit": "0/1",
+      "meaning": "1 = show the worm double automatically when you get on"
+    },
+    {
+      "id": "wire_thickness",
+      "value": 0.04,
+      "unit": "scale",
+      "meaning": "wire thickness (1 = 1 m wide cylinder)"
+    },
+    {
+      "id": "hand_height",
+      "value": 40,
+      "unit": "cm",
+      "meaning": "where on your body the wire starts, above your position point"
+    },
+    {
+      "id": "ride_bone_track",
+      "value": 1,
+      "unit": "0/1",
+      "meaning": "1 = rise and dip with the double's body where you sit"
+    },
+    {
+      "id": "ride_track_rate",
+      "value": 10,
+      "unit": "1/s",
+      "meaning": "how quickly you follow the double's body (higher = tighter)"
+    },
+    {
+      "id": "bone_pick_delay",
+      "value": 0.3,
+      "unit": "s",
+      "meaning": "wait after the double appears before choosing the bone to sit on"
+    },
+    {
+      "id": "ride_follow_sideways",
+      "value": 1,
+      "unit": "0/1",
+      "meaning": "1 = also follow the double's body left/right and forward/back, not just up/down"
+    },
+    {
+      "id": "seat_height",
+      "value": 120,
+      "unit": "cm",
+      "meaning": "how far above the top of the worm's body you sit"
+    },
+    {
+      "id": "seat_fallback_height",
+      "value": 1900,
+      "unit": "cm",
+      "meaning": "height above the neck seat bone (tuned in game with Home/End: 25 m - 6 m)"
+    },
+    {
+      "id": "face_along_body",
+      "value": 1,
+      "unit": "0/1",
+      "meaning": "1 = face from your seat bone toward the head bone (turns with the worm's head)"
+    },
+    {
+      "id": "ride_height_rate",
+      "value": 15,
+      "unit": "1/s",
+      "meaning": "how quickly your height follows the body surface"
+    },
+    {
+      "id": "seat_step",
+      "value": 100,
+      "unit": "cm",
+      "meaning": "how far one Home/End press raises or lowers you on the worm"
+    },
+    {
+      "id": "show_controls",
+      "value": 1,
+      "unit": "0/1",
+      "meaning": "1 = show the control list while riding at first (F6 toggles)"
+    }
+  ]
+}

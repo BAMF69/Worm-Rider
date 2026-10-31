@@ -1,0 +1,283 @@
+{
+  "sheet": "controls",
+  "about": "Every player input. One row = one action. 'press' uses a UE4SS keybind (ue4ss_key); 'hold' polls the game's own key state (ue_key). alt_key: a second UE4SS key that also counts for this trick during the untamed ride (none = no alternative).",
+  "columns": [
+    "id",
+    "label",
+    "glyph",
+    "input",
+    "ue4ss_key",
+    "ue_key",
+    "alt_key",
+    "stages",
+    "effect"
+  ],
+  "rows": [
+    {
+      "id": "leap",
+      "label": "Leap on / dismount",
+      "glyph": "G",
+      "input": "press",
+      "ue4ss_key": "G",
+      "ue_key": "G",
+      "alt_key": "none",
+      "stages": [
+        "idle",
+        "tamed_ride",
+        "tamed_wait"
+      ],
+      "effect": "idle: leap onto a worm in range, otherwise ready/cancel the hook (auto-leap when a worm comes in range); tamed_ride: dismount; tamed_wait: remount if close"
+    },
+    {
+      "id": "call",
+      "label": "Call your worm",
+      "glyph": "H",
+      "input": "press",
+      "ue4ss_key": "H",
+      "ue_key": "H",
+      "alt_key": "none",
+      "stages": [
+        "tamed_wait"
+      ],
+      "effect": "your tamed worm surfs to you"
+    },
+    {
+      "id": "arrow_up",
+      "label": "Arrow up",
+      "glyph": "UP",
+      "input": "press",
+      "ue4ss_key": "UP_ARROW",
+      "ue_key": "Up",
+      "alt_key": "W",
+      "stages": [
+        "wild_ride",
+        "tamed_ride"
+      ],
+      "effect": "trick input"
+    },
+    {
+      "id": "arrow_down",
+      "label": "Arrow down",
+      "glyph": "DOWN",
+      "input": "press",
+      "ue4ss_key": "DOWN_ARROW",
+      "ue_key": "Down",
+      "alt_key": "S",
+      "stages": [
+        "wild_ride",
+        "tamed_ride"
+      ],
+      "effect": "trick input"
+    },
+    {
+      "id": "arrow_left",
+      "label": "Arrow left",
+      "glyph": "LEFT",
+      "input": "press",
+      "ue4ss_key": "LEFT_ARROW",
+      "ue_key": "Left",
+      "alt_key": "A",
+      "stages": [
+        "wild_ride",
+        "tamed_ride"
+      ],
+      "effect": "trick input"
+    },
+    {
+      "id": "arrow_right",
+      "label": "Arrow right",
+      "glyph": "RIGHT",
+      "input": "press",
+      "ue4ss_key": "RIGHT_ARROW",
+      "ue_key": "Right",
+      "alt_key": "D",
+      "stages": [
+        "wild_ride",
+        "tamed_ride"
+      ],
+      "effect": "trick input"
+    },
+    {
+      "id": "breach",
+      "label": "Breach leap",
+      "glyph": "SPACE",
+      "input": "press",
+      "ue4ss_key": "SPACE",
+      "ue_key": "SpaceBar",
+      "alt_key": "none",
+      "stages": [
+        "tamed_ride"
+      ],
+      "effect": "you burst up off the worm's back in an arc"
+    },
+    {
+      "id": "throttle",
+      "label": "Surge",
+      "glyph": "W",
+      "input": "hold",
+      "ue4ss_key": "W",
+      "ue_key": "W",
+      "alt_key": "none",
+      "stages": [
+        "tamed_ride"
+      ],
+      "effect": "speed up to ride_speed"
+    },
+    {
+      "id": "brake",
+      "label": "Slow",
+      "glyph": "S",
+      "input": "hold",
+      "ue4ss_key": "S",
+      "ue_key": "S",
+      "alt_key": "none",
+      "stages": [
+        "tamed_ride"
+      ],
+      "effect": "slow to a stop"
+    },
+    {
+      "id": "turn_left",
+      "label": "Turn left",
+      "glyph": "A",
+      "input": "hold",
+      "ue4ss_key": "A",
+      "ue_key": "A",
+      "alt_key": "none",
+      "stages": [
+        "tamed_ride"
+      ],
+      "effect": "turn at turn_rate"
+    },
+    {
+      "id": "turn_right",
+      "label": "Turn right",
+      "glyph": "D",
+      "input": "hold",
+      "ue4ss_key": "D",
+      "ue_key": "D",
+      "alt_key": "none",
+      "stages": [
+        "tamed_ride"
+      ],
+      "effect": "turn at turn_rate"
+    },
+    {
+      "id": "dive",
+      "label": "Dive",
+      "glyph": "SHIFT",
+      "input": "hold",
+      "ue4ss_key": "SHIFT",
+      "ue_key": "LeftShift",
+      "alt_key": "none",
+      "stages": [
+        "tamed_ride"
+      ],
+      "effect": "drop low and sand-surf; arrow tricks fill the boost bar"
+    },
+    {
+      "id": "double",
+      "label": "Worm double",
+      "glyph": "F8",
+      "input": "press",
+      "ue4ss_key": "F8",
+      "ue_key": "F8",
+      "alt_key": "none",
+      "stages": [
+        "wild_ride",
+        "tamed_ride",
+        "tamed_wait"
+      ],
+      "effect": "experimental: show/hide a copy of the worm body at sand height"
+    },
+    {
+      "id": "body_up",
+      "label": "Body up",
+      "glyph": "PgUp",
+      "input": "press",
+      "ue4ss_key": "PAGE_UP",
+      "ue_key": "PageUp",
+      "alt_key": "none",
+      "stages": [
+        "wild_ride",
+        "tamed_ride",
+        "tamed_wait"
+      ],
+      "effect": "raise the double relative to the sand (or, with no double, the real worm's body)"
+    },
+    {
+      "id": "body_down",
+      "label": "Body down",
+      "glyph": "PgDn",
+      "input": "press",
+      "ue4ss_key": "PAGE_DOWN",
+      "ue_key": "PageDown",
+      "alt_key": "none",
+      "stages": [
+        "wild_ride",
+        "tamed_ride",
+        "tamed_wait"
+      ],
+      "effect": "experimental: lower the double (or the real worm's body)"
+    },
+    {
+      "id": "pose",
+      "label": "Riding pose",
+      "glyph": "F7",
+      "input": "press",
+      "ue4ss_key": "F7",
+      "ue_key": "F7",
+      "alt_key": "none",
+      "stages": [
+        "wild_ride",
+        "tamed_ride"
+      ],
+      "effect": "cycle other human poses already loaded; past the last one = back to the cross-legged riding pose"
+    },
+    {
+      "id": "seat_up",
+      "label": "Sit higher",
+      "glyph": "Home",
+      "input": "press",
+      "ue4ss_key": "HOME",
+      "ue_key": "Home",
+      "alt_key": "none",
+      "stages": [
+        "stunned",
+        "wild_ride",
+        "tamed_ride"
+      ],
+      "effect": "raise yourself 1 m relative to the worm"
+    },
+    {
+      "id": "seat_down",
+      "label": "Sit lower",
+      "glyph": "End",
+      "input": "press",
+      "ue4ss_key": "END",
+      "ue_key": "End",
+      "alt_key": "none",
+      "stages": [
+        "stunned",
+        "wild_ride",
+        "tamed_ride"
+      ],
+      "effect": "lower yourself 1 m relative to the worm"
+    },
+    {
+      "id": "controls",
+      "label": "Show/hide controls",
+      "glyph": "F6",
+      "input": "press",
+      "ue4ss_key": "F6",
+      "ue_key": "F6",
+      "alt_key": "none",
+      "stages": [
+        "wild_ride",
+        "tamed_ride",
+        "tamed_wait"
+      ],
+      "effect": "show or hide the control list"
+    }
+  ]
+}

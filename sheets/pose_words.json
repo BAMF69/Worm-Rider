@@ -1,0 +1,84 @@
+{
+  "sheet": "pose_words",
+  "about": "Name parts (split on _) that mark a loaded animation as a riding-pose candidate. One row = one word; lower priority number = tried first.",
+  "columns": [
+    "id",
+    "word",
+    "priority",
+    "why"
+  ],
+  "rows": [
+    {
+      "id": "w_sandbike",
+      "word": "sandbike",
+      "priority": 1,
+      "why": "the sandbike rider pose"
+    },
+    {
+      "id": "w_bike",
+      "word": "bike",
+      "priority": 2,
+      "why": "bike rider poses"
+    },
+    {
+      "id": "w_driver",
+      "word": "driver",
+      "priority": 2,
+      "why": "vehicle driver poses"
+    },
+    {
+      "id": "w_drive",
+      "word": "drive",
+      "priority": 2,
+      "why": "driving poses"
+    },
+    {
+      "id": "w_vehicle",
+      "word": "vehicle",
+      "priority": 3,
+      "why": "vehicle poses"
+    },
+    {
+      "id": "w_buggy",
+      "word": "buggy",
+      "priority": 3,
+      "why": "buggy driver poses"
+    },
+    {
+      "id": "w_ride",
+      "word": "ride",
+      "priority": 3,
+      "why": "riding poses"
+    },
+    {
+      "id": "w_riding",
+      "word": "riding",
+      "priority": 3,
+      "why": "riding poses"
+    },
+    {
+      "id": "w_mount",
+      "word": "mounted",
+      "priority": 4,
+      "why": "mounted poses"
+    },
+    {
+      "id": "w_seated",
+      "word": "seated",
+      "priority": 4,
+      "why": "seated poses"
+    },
+    {
+      "id": "w_sit",
+      "word": "sit",
+      "priority": 4,
+      "why": "sitting poses (whole word only)"
+    },
+    {
+      "id": "w_sitting",
+      "word": "sitting",
+      "priority": 4,
+      "why": "sitting poses"
+    }
+  ]
+}
